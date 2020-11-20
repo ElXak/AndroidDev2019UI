@@ -1,7 +1,16 @@
+<!-- multiple string resources can be created -->
 <resources>
     <string name="app_name">My Favorite Monster</string>
     <string name="action_settings">Settings</string>
     <string name="monster_1">Monster 1</string>
     <string name="monster_2">Monster 2</string>
     <string name="monster_3">Monster 3</string>
+    <string name="hello">Hello</string>
+    <string name="from">From</string>
+    <string name="android">Android</string>
+    <string name="your_name">Your name</string>
+    <string name="password">Password</string>
+    <string name="click_me">Click me</string>
+    <!-- %s: string; %d: integer; %f: floating number -->
+    <string name="login_message">Name: %s, Password: %s</string>
 </resources>

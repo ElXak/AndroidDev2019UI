@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- the views which are not part of core android sdk and are external library has package declarations
+    CoordinatorLayout is the root element it manages all the elements in the screen -->
 <androidx.coordinatorlayout.widget.CoordinatorLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,11 +9,13 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
+    <!-- AppBarLayout contains the toolbar -->
     <com.google.android.material.appbar.AppBarLayout
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:theme="@style/AppTheme.AppBarOverlay">
 
+        <!-- Toolbar is where you see icons and menus in the top of the screen -->
         <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
@@ -22,5 +26,9 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <include layout="@layout/content_main"/>
+
+    <!-- Floating Button is set at the bottom corner of the screen because
+        layout_gravity="bottom|end". Within CoordinatorLayout you use layout_gravity, but
+         within ConstraintLayout you use layout_constraint -->
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

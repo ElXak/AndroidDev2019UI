@@ -1,11 +1,16 @@
 <resources>
 
-    <!-- Base application theme. -->
+    <!-- Base application theme. Themes are set of styles.
+        This theme inherits a lot of settings from parent theme.
+        And modified by declaration of various colors -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Customize your theme here. colorPrimary, colorPrimaryDark, colorAccent are reserved names.
+            www.materialpalette.com -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <!-- buttonStyle is a reserved style name. Each view component in AndroidSDK has name like this -->
+        <item name="buttonStyle">@style/monster_button</item>
     </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
@@ -13,5 +18,15 @@
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <!-- styles are set of properties, and themes are set of styles. Any style you use for a reserved style
+        must be explicitly based on an existing style. you do that with the parent attribute -->
+    <style name="monster_button" parent="@android:style/Widget.Button">
+        <item name="android:drawableLeft">@drawable/ic_monster01</item>
+        <!-- in adroid older then v21 we will use new feature background
+         because backgroundTint is not supported -->
+        <item name="android:background">@color/accent</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
 
 </resources>
